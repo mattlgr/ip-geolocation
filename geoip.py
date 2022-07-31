@@ -1,10 +1,22 @@
 from requests import get
 from json import loads
+import socket
 
 class GeoIP:
     def __init__(self, target):
         self.target = target
     
+    def validate_ipv4(self):
+        try:
+            socket.inet_aton(self.ip)
+            return True
+        except socket.error:
+            try:
+                self.ip = socket.inet_aton(socket.gethostbyname(self.ip))
+                return True
+            except socket.error:
+                return None
+
     def requestApi(self):
         try:
             response = get(f"https://ipinfo.io/{self.target}/json")
