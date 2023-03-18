@@ -8,12 +8,12 @@ it parses this response:
 ```
 {
   "ip": "***.**.***.***",
-  "hostname": "********.**.sky.com",
+  "hostname": "********.**.***.***",
   "city": "East Cowes",
   "region": "England",
   "country": "GB",
-  "loc": "50.753726107551, -1.2893486022949", # Not my house!
-  "org": "****** Sky UK Limited",
+  "loc": "50.753726107551, -1.2893486022949",
+  "org": "****** *** ** Limited",
   "postal": "PO",
   "timezone": "Europe/London",
   "readme": "https://ipinfo.io/missingauth"
@@ -27,10 +27,10 @@ device@device MINGW64 ~/geo ip (master)
 $ python main.py 
 Desired IP> ***.**.***.***
 Response for: ***.**.***.***
-Hostname: ********.**.sky.com
+Hostname: ********.**.***.***
 Basic Address: GB, England, East Cowes
 Coordinates: 50.753726107551, -1.2893486022949 # Again not my house!
-Organisation: ****** Sky UK Limited 
+Organisation: ****** *** ** Limited
 Postcode/Zip code: PO
 Timezone: Europe/London
 
